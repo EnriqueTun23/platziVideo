@@ -1,0 +1,124 @@
+¿Qué paquete utilizamos para crear un entorno de desarrollo local?
+R= [webpack-dev-server]
+
+¿Cuándo fueron lanzados los React Hooks?
+R= [React 16.8, Octubre 2018]
+
+¿Cómo ejecutamos nuestra Fake API?
+R=[json-server file.json]
+
+Pregunta 4 / 30
+
+¿Funcion para manejar el evento del Click en React?
+R=[onClick()]
+
+¿Qué regla deben seguir nuestros Custom Hooks?
+R=[Deben iniciar con “use”.]
+
+Con este paquete podemos crear un servidor local para exponer una Fake API
+R= [json-server]
+
+¿Para qué nos sirve useEffect()?
+R=[useEffect, agrega la capacidad de realizar efectos secundarios desde un componente creado como función. Ejemplo: Llamar una API.]
+
+¿Para que nos sirve Webpack?
+R= [Webpack es una herramienta de compilación que nos permite añadir en un archivo todas las dependencias a los elementos que forman parte de tu proyecto de desarrollo]
+
+¿Para qué nos sirven los prop-types?
+R= [Nos permiten validar las propiedades que pasamos a nuestros componentes.]
+
+¿Cuál de los siguientes componentes es un componente de tipo función?
+R= [import React from 'react'
+const Stateless = () => {
+    return(
+        <h1>Hola mundo Stateless</h1>
+    )
+}
+export default Stateless;
+]
+¿Cuál es el comando para ejecutar nuestro entorno de desarrollo local?
+R= [npm run start]
+
+¿Para qué nos sirve el archivo .gitignore de nuestro proyecto?
+R=[Especifica archivos que no deben de ser rastreados o debe ignorar o se deben ignorar en GIT.]
+
+¿Para qué nos sirve useState()?
+R= [Nos permite trabajar con el estado de un componente en React sin escribir una clase.]
+
+El metodo .map() nos permite iterar por un arreglo
+R=[ Verdadero]
+
+babel-eslint es una libreria que nos ayuda a:
+R=[babel-eslint le permite a ESLint entender el código JavaScript que escribimos con Babel.]
+
+html-webpack-plugin es un paquete que utilizamos para:
+R= [Este complemento nos permite simplificar la creación de archivos HTML y servir los bundles creados por Webpack]
+
+
+¿Cómo inicializamos un proyecto con npm?
+R=[npm init]
+
+¿Cuál de los siguientes componentes es un componente presentacional?
+R= [import React from 'react'
+const ComponentX = () => <h1>Hola mundo</h1>
+export default ComponentX]
+
+¿Qué es React Hooks?
+R=[Nos permite usar el estado y otras características de React sin escribir una clase.]
+
+¿Para qué nos sirve el flag --save-dev?
+R=[–save-dev se usa para guardar el paquete con fines de desarrollo.]
+
+¿Cuál es la propuesta de React para utilizar clases de css en JSX?
+R=[className]
+
+¿En qué archivo creamos la configuración de ESLint?
+R=[.eslintrc]
+
+
+¿Cuál de los siguientes componentes es un componente de tipo clase?
+R= 
+[import React, {Component} from 'react';
+    class Stateful extends Component{
+        constructor(props) {
+            super(props);
+            this.state = {
+                hello: 'Hola mundo state ful'
+            }
+        }
+        render () {
+            return (
+                <h1>{this.state.hello}</h1>
+            )
+        }
+    }
+    export default Stateful
+]
+
+ReactDOM.render() nos permite representar un elemento creado en React como un nodo del DOM.
+R= [Verdadero]
+
+¿Qué es JSX?
+R=[Es una sintaxis que nos permite utilizar HTML dentro de JavaScript en React]
+
+¿En qué archivo creamos la configuración de Babel?
+R=[.babelrc]
+
+¿Cómo instalamos React en nuestro proyecto?
+R=[npm install react --save]
+
+¿Cuál es el loader que utilizamos para añadir soporte a Sass?
+R=loader-sass
+R=sass-loader
+R3 = loader-scss
+
+
+Cómo añadimos/importamos estilos de Sass a nuestros componentes en React?
+R=[import './styles/Categories.scss';]
+
+
+¿Qué es Babel?
+R=[Babel es una herramienta que nos permite transformar nuestro código Javascript ES6 a JavaScript que cualquier navegador soporte]
+
+¿import React from react es una forma correcta de importar react-dom?
+R=[Falso]

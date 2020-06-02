@@ -2,8 +2,8 @@
 // libs
 import React from 'react';
 import ReactDOM from 'react-dom';
-// components
-import HelloWorld from './components/HelloWorld'
+// container
+import App from './containers/App';
 
-ReactDOM.render(<HelloWorld></HelloWorld>, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
 
