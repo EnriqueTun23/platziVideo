@@ -1,44 +1,53 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
+import { connect } from 'react-redux';
 //componentes
-import Header from '../components/Header';
 import Search from '../components/Search';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
-import Footer from '../components/Footer';
 // styles
 import '../assets/styles/App.scss';
 // api
 import useInitialState from '../hooks/useInitialState';
 
-const API = 'http://localhost:3000/initalState';
-
-const App = () => {
-  const videos = useInitialState(API);
+const Home = ({ myList, trends, originals }) => {
   return (
-    <div className='App'>
-      <Header />
+    <>
       <Search />
-      { videos.mylist.length > 0 && (
+      { myList.length > 0 && (
         <Categories title='Mi lista'>
           <Carousel>
-            {videos.mylist.map((item) => <CarouselItem key={item.id} {...item} />)}
+            {myList.map((item) => (
+              <CarouselItem
+                key={item.id}
+                {...item}
+                isList
+              />
+            ))}
           </Carousel>
         </Categories>
       )}
       <Categories title='Tendencias'>
         <Carousel>
-          {videos.trends.map((item) => <CarouselItem key={item.id} {...item} />)}
+          {trends.map((item) => <CarouselItem key={item.id} {...item} />)}
         </Carousel>
       </Categories>
       <Categories title='Originales de  PLatzi'>
         <Carousel>
-          {videos.originals.map((item) => <CarouselItem key={item.id} {...item} />)}
+          {originals.map((item) => <CarouselItem key={item.id} {...item} />)}
         </Carousel>
       </Categories>
-      <Footer />
-    </div>
+    </>
   );
 };
-export default App;
+
+const mapStateToProps = (state) => {
+  return {
+    myList: state.myList,
+    trends: state.trends,
+    originals: state.originals,
+  };
+};
+
+export default connect(mapStateToProps, null)(Home);
