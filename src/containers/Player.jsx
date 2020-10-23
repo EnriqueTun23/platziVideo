@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { getVideoSource } from '../actions';
 import '../assets/styles/components/Player.scss';
+import NotFound from './NotFound';
 
 const Player = (props) => {
   const { match, playing } = props;
@@ -22,7 +23,7 @@ const Player = (props) => {
         </button>
       </div>
     </div>
-  ) : <Redirect to='/404/' />;
+  ) : <NotFound />;
 };
 
 const mapStateToProps = (state) => {
